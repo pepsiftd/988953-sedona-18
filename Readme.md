@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Владимир Санников](https://up.htmlacademy.ru/adaptive/18/user/988953).
-* Наставник: [Артем Макаров].
+* Наставник: [Артем Макаров](https://up.htmlacademy.ru/adaptive/18/user/429879).
 
 ---
 
