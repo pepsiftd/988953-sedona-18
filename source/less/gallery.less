@@ -1,0 +1,48 @@
+.gallery__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 20px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+.gallery__item:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.gallery__title {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery__image-link {
+  display: block;
+  order: -1;
+}
+
+.gallery__author {
+  color: #333333;
+  font-size: @font-normal;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.gallery__author cite {
+  font-style: normal;
+}
+
+.gallery__like-counter {
+  color: #000000;
+  font-size: @font-normal;
+  line-height: 24px;
+  font-weight: bold;
+}
