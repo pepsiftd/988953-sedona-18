@@ -1,8 +1,8 @@
 .advantages {
-  color: #000000;
+  color: @main-font-color;
   text-align: center;
 
-  background-color: @color-main;
+  background-color: @theme-color;
 }
 
 .advantages__intro {
@@ -19,14 +19,14 @@
 
 .advantages__main-title {
   font-size: @font-medium;
-  line-height: 26px;
-  font-weight: bold;
+  line-height: @wide-line-height;
+  font-weight: 700;
 }
 
 .advantages__sub-title {
   font-size: @font-small;
-  line-height: 26px;
-  font-weight: normal;
+  line-height: @wide-line-height;
+  font-weight: 400;
 }
 
 .advantages__list {
@@ -39,10 +39,10 @@
 .advantages__item {
   padding: 30px 0;
 
-  color: #ffffff;
+  color: @alt-font-color;
 
   &--gray {
-    color: #000000;
+    color: @main-font-color;
 
     background-color: #eeeeee;
   }
@@ -70,16 +70,16 @@
   padding-right: 20px;
 
   font-size: @font-medium;
-  line-height: 26px;
-  font-weight: bold;
+  line-height: @wide-line-height;
+  font-weight: 700;
 }
 
 .advantages__number {
   margin-top: 10px;
 
   font-size: @font-small;
-  line-height: 21px;
-  font-weight: normal;
+  line-height: @thin-line-height;
+  font-weight: 400;
 }
 
 .advantages__text {
@@ -89,6 +89,6 @@
   padding-right: 20px;
 
   font-size: @font-small;
-  line-height: 21px;
-  font-weight: normal;
+  line-height: @thin-line-height;
+  font-weight: 400;
 }
