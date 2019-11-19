@@ -2,11 +2,17 @@
   display: inline-block;
   vertical-align: middle;
 
-  width: 27px;
-  height: 34px;
-
   font-size: 0;
+  line-height: 0;
 
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
+  &::before {
+    display: block;
+    content: "";
+
+    width: 27px;
+    height: 34px;
+
+    background-image: url("../img/logo-htmlacademy.svg");
+    background-repeat: no-repeat;
+  }
 }
