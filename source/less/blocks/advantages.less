@@ -94,3 +94,45 @@
   line-height: @thin-line-height;
   font-weight: 400;
 }
+
+@media (min-width: @tablet-width) {
+  .advantages__intro {
+    background-image: none;
+    background-color: @main-bg-color;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .advantages__item {
+    width: 100%;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      padding-top: 0;
+    }
+
+    &:nth-of-type(3),
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      width: calc(100% / 3);
+    }
+
+    &:nth-of-type(2) .advantages__wrapper {
+      order: 1;
+    }
+  }
+
+  .advantages__wrapper {
+    padding-top: 45px;
+    width: calc(100% / 3);
+  }
+
+  .advantages__image {
+    margin-top: 0;
+    width: 67%;
+  }
+}

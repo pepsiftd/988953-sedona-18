@@ -30,3 +30,19 @@
     box-shadow: inset 0 -7px 7px 0 rgba(0, 0, 0, 0.2);
   }
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    color: @main-font-color;
+
+    background-color: @main-bg-color;
+  }
+
+  .site-list__item {
+    border: none;
+
+    &:last-child {
+      box-shadow: none;
+    }
+  }
+}

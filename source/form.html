@@ -6,52 +6,54 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <nav class="main-nav">
-        <a href="index.html" class="main-nav__logo">
-          <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
-        </a>
+    <div class="site-wrapper">
+      <header class="page-header">
+        <nav class="main-nav">
+          <a href="index.html" class="main-nav__logo">
+            <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+          </a>
 
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="photo.html">Фото и видео</a></li>
-          <li class="site-list__item"><a class="site-list__link">Форма отзыва</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="photo.html">Фото и видео</a></li>
+            <li class="site-list__item"><a class="site-list__link">Форма отзыва</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          </ul>
+
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        </nav>
+      </header>
+
+      <main class="page-main">
+        <div class="welcome welcome--inner">
+          <img class="welcome__image" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону!">
+        </div>
+
+        <h1 class="page-main__title">Форма отзыва</h1>
+
+      </main>
+
+      <footer class="page-footer">
+        <b class="page-footer__hashtag">
+          #visitsedona
+        </b>
+
+        <ul class="page-footer__social social">
+          <li class="social__item social__item--twitter">
+            <a href="#">Twitter</a>
+          </li>
+          <li class="social__item social__item--facebook">
+            <a href="#">Facebook</a>
+          </li>
+          <li class="social__item social__item--youtube">
+            <a href="#">Youtube</a>
+          </li>
         </ul>
 
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-      </nav>
-    </header>
-
-    <main class="page-main">
-      <div class="welcome welcome--inner">
-        <img class="welcome__image" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону!">
-      </div>
-
-      <h1 class="page-main__title">Форма отзыва</h1>
-
-    </main>
-
-    <footer class="page-footer">
-      <b class="page-footer__hashtag">
-        #visitsedona
-      </b>
-
-      <ul class="page-footer__social social">
-        <li class="social__item social__item--twitter">
-          <a href="#">Twitter</a>
-        </li>
-        <li class="social__item social__item--facebook">
-          <a href="#">Facebook</a>
-        </li>
-        <li class="social__item social__item--youtube">
-          <a href="#">Youtube</a>
-        </li>
-      </ul>
-
-      <p class="page-footer__copyright copyright">Разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="html-academy-logo">HTML Academy</a>
-      </p>
-    </footer>
+        <p class="page-footer__copyright copyright">Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="html-academy-logo">HTML Academy</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
