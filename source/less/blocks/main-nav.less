@@ -1,3 +1,34 @@
+.main-nav {
+  position: relative;
+}
+
 .main-nav__list {
   margin: 0;
+}
+
+.main-nav__logo {
+  position: absolute;
+  top: calc(100% - 22px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__logo {
+    top: 0;
+  }
 }
