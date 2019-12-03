@@ -1,5 +1,7 @@
 .main-nav {
   position: relative;
+
+  padding-bottom: 56px;
 }
 
 .main-nav__list {
@@ -8,9 +10,15 @@
 
 .main-nav__logo {
   position: absolute;
-  top: calc(100% - 22px);
+  top: calc(100% - 56px);
   left: 50%;
   transform: translateX(-50%);
+}
+
+.main-nav__toggle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 @media (min-width: @tablet-width) {
