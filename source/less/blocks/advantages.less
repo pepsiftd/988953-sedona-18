@@ -50,11 +50,16 @@
   }
 
   &:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+
     padding-top: 45px;
     padding-bottom: 0;
   }
 
   &:nth-of-type(2) {
+    display: flex;
+
     padding-top: 45px;
     padding-bottom: 0;
   }
@@ -133,6 +138,6 @@
 
   .advantages__image {
     margin-top: 0;
-    width: 67%;
+    width: calc(100% / 3 * 2);
   }
 }
