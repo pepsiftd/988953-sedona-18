@@ -1,3 +1,24 @@
+.map {
+  position: relative;
+}
+
+.map__link {
+  &::before {
+    z-index: 1;
+    position: absolute;
+    top: 46%;
+    left: 45.5%;
+
+    content: "";
+    display: block;
+    width: 27px;
+    height: 27px;
+
+    background-image: url("../img/icon-map-marker.svg");
+  }
+}
+
 .map__image {
   display: block;
+  position: relative;
 }
