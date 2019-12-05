@@ -5,14 +5,12 @@
   font-size: 0;
   line-height: 0;
 
-  &::before {
-    display: block;
-    content: "";
+  &:hover path,
+  &:focus path {
+    fill: @theme-color;
+  }
 
-    width: 27px;
-    height: 34px;
-
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
+  &:active path {
+    fill: #b2b2b2;
   }
 }
