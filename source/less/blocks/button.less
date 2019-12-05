@@ -10,4 +10,22 @@
   font-weight: 700;
 
   background-color: @theme-color;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: #88b6d1;
+
+    background-color: #5496bd;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+
+    background-color: #e5e5e5;
+  }
 }
