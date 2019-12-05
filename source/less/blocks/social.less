@@ -11,25 +11,15 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
 
   font-size: 0;
 
-  background-color: @theme-color;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
-  }
-
-  &--facebook {
-    background-image: url("../img/icon-facebook.svg");
-  }
-
-  &--youtube {
-    background-image: url("../img/icon-youtube.svg");
+  &:active path {
+    fill: @active-link-text-color;
   }
 }
