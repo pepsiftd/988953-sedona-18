@@ -11,7 +11,7 @@
 
   .container();
   padding-top: 22px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 
   border-top: 1px solid #e5e5e5;
 
@@ -23,6 +23,11 @@
 .gallery__title {
   padding: 0;
   margin: 0;
+  margin-top: 16px;
+
+  font-size: @font-small;
+  line-height: @medium-line-height;
+  font-weight: 700;
 }
 
 .gallery__image-link {
@@ -41,6 +46,7 @@
   font-size: @font-small;
   line-height: @medium-line-height;
   font-weight: 400;
+  text-transform: none;
 }
 
 .gallery__author-ref {
@@ -48,10 +54,29 @@
 }
 
 .gallery__like-counter {
+  position: relative;
+
+  display: block;
+  padding-left: 36px;
+  margin-top: 8px;
+
   color: @main-font-color;
   font-size: @font-small;
   line-height: @medium-line-height;
   font-weight: 700;
+
+  &::before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+    display: block;
+    content: "";
+    width: 22px;
+    height: 20px;
+
+    background-image: url("../img/icon-like.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
