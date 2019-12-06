@@ -46,6 +46,11 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
+    display: flex;
+
+    padding-left: 33px;
+    padding-right: 12px;
+
     color: @main-font-color;
 
     background-color: @main-bg-color;
@@ -54,12 +59,28 @@
   .site-list__item {
     border: none;
 
-    &:last-child {
+    &:nth-child(2) {
+      margin-right: auto;
+      margin-left: 48px;
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    &:last-child .site-list__link{
       box-shadow: none;
     }
   }
 
   .site-list__link {
     padding: 8px 15px;
+
+    font-size: @font-small;
+
+    background-color: transparent;
+
+    border: none;
   }
 }
