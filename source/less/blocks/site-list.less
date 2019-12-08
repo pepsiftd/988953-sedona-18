@@ -48,8 +48,8 @@
   .site-list {
     display: flex;
 
-    padding-left: 33px;
-    padding-right: 12px;
+    padding-left: 4.3%;
+    padding-right: 1.56%;
 
     color: @main-font-color;
 
@@ -61,12 +61,12 @@
 
     &:nth-child(2) {
       margin-right: auto;
-      margin-left: 48px;
+      margin-left: 6.5%;
     }
 
     &:nth-child(3) {
       margin-left: auto;
-      margin-right: 20px;
+      margin-right: 2.6%;
     }
 
     &:last-child .site-list__link{
@@ -96,6 +96,25 @@
       opacity: 0.3;
 
       background-color: transparent;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    padding-left: 76px;
+    padding-right: 55px;
+  }
+
+  .site-list__item {
+    &:nth-child(2) {
+      margin-right: auto;
+      margin-left: 132px;
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+      margin-right: 107px;
     }
   }
 }

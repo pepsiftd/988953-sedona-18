@@ -6,7 +6,8 @@
 }
 
 .advantages__intro {
-  .container();
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 40px;
   padding-bottom: 42px;
 
@@ -60,7 +61,8 @@
     background-color: #eeeeee;
 
     & .advantages__text {
-      padding: 0 31px;
+      padding: 0;
+      max-width: 80.6%;
     }
 
     &::after {
@@ -102,14 +104,15 @@
 
 .advantages__image {
   display: block;
+  width: 100%;
 
   margin-top: 40px;
 }
 
 .advantages__title {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  .container();
+  max-width: 87%;
 
   font-size: @font-medium;
   line-height: @wide-line-height;
@@ -126,10 +129,10 @@
 }
 
 .advantages__text {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   margin-top: 15px;
-  .container();
+  max-width: 87.5%;
 
   font-size: @font-small;
   line-height: @thin-line-height;
@@ -191,13 +194,11 @@
       padding-bottom: 45px;
 
       & .advantages__title {
-        padding-left: 50px;
-        padding-right: 50px;
+        max-width: 61%;
       }
 
       & .advantages__text {
-        padding-left: 54px;
-        padding-right: 54px;
+        max-width: 57.8%;
       }
 
       &::after {
@@ -212,8 +213,7 @@
   }
 
   .advantages__title {
-    padding-left: 40px;
-    padding-right: 40px;
+    max-width: 60%;
 
     font-size: @font-big;
   }
@@ -229,8 +229,52 @@
   }
 
   .advantages__text {
-    padding-left: 43px;
-    padding-right: 43px;
     margin-top: 20px;
+    max-width: 66.4%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__main-title {
+    max-width: 50%;
+  }
+
+  .advantages__item {
+    &--gray {
+      padding-bottom: 66px;
+
+      & .advantages__title {
+        max-width: 40%;
+      }
+
+      & .advantages__text {
+        max-width: 80%;
+      }
+    }
+
+    &:nth-child(2) {
+      & .advantages__text {
+        margin-top: 22px;
+        max-width: 55%;
+      }
+    }
+
+    &:nth-child(4) {
+      & .advantages__text {
+        max-width: 65%;
+      }
+    }
+  }
+
+  .advantages__wrapper {
+    padding-top: 52px;
+  }
+
+  .advantages__title {
+    max-width: 40%;
+  }
+
+  .advantages__text {
+    max-width: 70%;
   }
 }

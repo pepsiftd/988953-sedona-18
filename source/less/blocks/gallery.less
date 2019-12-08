@@ -141,9 +141,6 @@
   }
 
   .gallery__legend {
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
     position: relative;
 
     padding-left: 20px;
@@ -176,6 +173,14 @@
     padding-right: 0;
   }
 
+  .gallery__text {
+    max-width: 40%;
+  }
+
+  .gallery__list {
+    margin-top: 71px;
+  }
+
   .gallery__item {
     position: relative;
     width: calc(100% / 3);
@@ -187,5 +192,17 @@
     width: 100%;
 
     background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .gallery__description {
+    color: @alt-font-color;
+  }
+
+  .gallery__author {
+    color: @alt-font-color;
+  }
+
+  .gallery__like-counter {
+    color: @alt-font-color;
   }
 }
