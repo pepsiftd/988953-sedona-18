@@ -184,6 +184,13 @@
   .gallery__item {
     position: relative;
     width: calc(100% / 3);
+
+    &:first-child {
+      .gallery__like-counter {
+        left: auto;
+        right: 21px;
+      }
+    }
   }
 
   .gallery__legend {
@@ -203,6 +210,14 @@
   }
 
   .gallery__like-counter {
+    left: 78%;
+
     color: @alt-font-color;
+
+    &::before {
+      left: 3px;
+
+      background-image: url("../img/icon-like-white.svg");
+    }
   }
 }
