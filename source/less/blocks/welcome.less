@@ -9,9 +9,12 @@
     url("../img/bg-intro-triangle-mobile.svg"),
     url("../img/bg-back-mobile@1x.jpg");
   background-position:
-    top 50% left calc(50% + 10px),
+    bottom 0 left 50%,
     center;
-  background-size: cover;
+  background-size:
+    contain,
+    cover;
+  background-repeat: no-repeat;
 }
 
 .welcome--inner {
@@ -27,6 +30,10 @@
   .welcome {
     padding-top: 77px;
     padding-bottom: 85px;
+
+  background-image:
+    url("../img/bg-intro-triangle-tablet.svg"),
+    url("../img/bg-back-tablet@1x.jpg");
   }
 
   .welcome__image {
@@ -45,6 +52,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .welcome {
+  background-image:
+    url("../img/bg-intro-triangle-desktop.svg"),
+    url("../img/bg-back-desktop@1x.jpg");
+  }
+
   .welcome--inner {
     padding-top: 102px;
     padding-bottom: 113px;
