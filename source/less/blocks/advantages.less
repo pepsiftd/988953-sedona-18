@@ -189,10 +189,8 @@
       }
     }
 
-    &:nth-of-type(3) {
-      .advantages__text {
+    &:nth-of-type(3) .advantages__text {
         max-width: 62%;
-      }
     }
 
     &--gray {
@@ -258,14 +256,18 @@
       }
     }
 
-    &:nth-child(2) {
+    &:nth-of-type(2) {
       .advantages__text {
         margin-top: 22px;
         max-width: 55%;
       }
     }
 
-    &:nth-child(4) {
+    &:nth-of-type(3) .advantages__text {
+        max-width: 80%;
+    }
+
+    &:nth-of-type(4) {
       .advantages__text {
         max-width: 65%;
       }
@@ -282,11 +284,5 @@
 
   .advantages__text {
     max-width: 70%;
-  }
-}
-
-@media (max-width: calc(@tablet-width - 1px)) {
-  .advantages__title br {
-    display: none;
   }
 }
