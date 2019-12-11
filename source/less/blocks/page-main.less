@@ -1,7 +1,13 @@
+.page-main {
+  background-color: @main-bg-color;
+}
+
 .page-main__title {
   padding: 0;
-  margin: 0;
-  .container();
+  margin: 0 auto;
+  margin-top: 38px;
+
+  max-width: 87.5%;
 
   font-size: @font-medium;
   line-height: @wide-line-height;
@@ -9,13 +15,16 @@
   text-align: center;
 }
 
-.page-main__text {
-  padding: 0;
-  margin: 0;
-  .container();
+@media (min-width: @tablet-width) {
+  .page-main__title {
+    margin-top: 75px;
 
-  font-size: @font-small;
-  line-height: @medium-line-height;
-  font-weight: 400;
-  text-align: center;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__title {
+    margin-top: 112px;
+  }
 }

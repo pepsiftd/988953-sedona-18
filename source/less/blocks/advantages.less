@@ -6,9 +6,10 @@
 }
 
 .advantages__intro {
-  .container();
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 42px;
 
   background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
@@ -17,14 +18,19 @@
 }
 
 .advantages__main-title {
+  display: block;
+  max-width: 95%;
+  margin: 0 auto;
+
   font-size: @font-medium;
   line-height: @wide-line-height;
   font-weight: 700;
 }
 
-.advantages__sub-title {
+.advantages__subtitle {
   padding: 0;
   margin: 0;
+  margin-top: 27px;
 
   font-size: @font-small;
   line-height: @wide-line-height;
@@ -39,37 +45,74 @@
 }
 
 .advantages__item {
-  padding: 30px 0;
+  padding: 0;
+  padding-top: 25px;
 
   color: @alt-font-color;
 
   &--gray {
+    position: relative;
+
+    padding-top: 27px;
+    padding-bottom: 28px;
+
     color: @main-font-color;
 
     background-color: #eeeeee;
+
+    .advantages__text {
+      padding: 0;
+      max-width: 80.6%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 87%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:last-child::after {
+      display: none;
+    }
   }
 
   &:nth-of-type(1) {
-    padding-top: 45px;
+    padding-top: 40px;
     padding-bottom: 0;
   }
 
   &:nth-of-type(2) {
-    padding-top: 45px;
+    padding-top: 39px;
     padding-bottom: 0;
+
+    .advantages__image {
+      margin-top: 39px;
+    }
+  }
+
+  &:nth-of-type(5) {
+    padding-bottom: 27px;
   }
 }
 
 .advantages__image {
   display: block;
+  width: 100%;
 
-  margin-top: 45px;
+  margin-top: 40px;
 }
 
 .advantages__title {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  .container();
+  max-width: 87%;
 
   font-size: @font-medium;
   line-height: @wide-line-height;
@@ -77,7 +120,8 @@
 }
 
 .advantages__number {
-  margin-top: 10px;
+  display: block;
+  margin-top: 9px;
 
   font-size: @font-small;
   line-height: @thin-line-height;
@@ -85,20 +129,31 @@
 }
 
 .advantages__text {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   margin-top: 15px;
-  .container();
+  max-width: 87.5%;
 
   font-size: @font-small;
   line-height: @thin-line-height;
   font-weight: 400;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .advantages__intro {
+    padding-bottom: 51px;
+
     background-image: none;
     background-color: @main-bg-color;
+  }
+
+  .advantages__main-title {
+    margin-top: 10px;
+
+    max-width: 80%;
+
+    font-size: @font-big;
   }
 
   .advantages__list {
@@ -112,6 +167,9 @@
 
     &:nth-of-type(1),
     &:nth-of-type(2) {
+      display: flex;
+      flex-wrap: wrap;
+
       padding-top: 0;
     }
 
@@ -121,8 +179,35 @@
       width: calc(100% / 3);
     }
 
-    &:nth-of-type(2) .advantages__wrapper {
-      order: 1;
+    &:nth-of-type(2) {
+      .advantages__wrapper {
+        order: 1;
+      }
+
+      .advantages__image {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-of-type(3) .advantages__text {
+      max-width: 62%;
+    }
+
+    &--gray {
+      padding-top: 45px;
+      padding-bottom: 45px;
+
+      .advantages__title {
+        max-width: 61%;
+      }
+
+      .advantages__text {
+        max-width: 57.8%;
+      }
+
+      &::after {
+        display: none;
+      }
     }
   }
 
@@ -131,8 +216,73 @@
     width: calc(100% / 3);
   }
 
+  .advantages__title {
+    max-width: 60%;
+
+    font-size: @font-big;
+  }
+
+  .advantages__number {
+    margin-top: 10px;
+  }
+
   .advantages__image {
     margin-top: 0;
-    width: 67%;
+    width: calc(100% / 3 * 2);
+    height: 256px;
+  }
+
+  .advantages__text {
+    margin-top: 20px;
+    max-width: 66.4%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__main-title {
+    max-width: 50%;
+  }
+
+  .advantages__item {
+    &--gray {
+      padding-bottom: 66px;
+
+      .advantages__title {
+        max-width: 40%;
+      }
+
+      .advantages__text {
+        max-width: 80%;
+      }
+    }
+
+    &:nth-of-type(2) {
+      .advantages__text {
+        margin-top: 22px;
+        max-width: 55%;
+      }
+    }
+
+    &:nth-of-type(3) .advantages__text {
+      max-width: 80%;
+    }
+
+    &:nth-of-type(4) {
+      .advantages__text {
+        max-width: 65%;
+      }
+    }
+  }
+
+  .advantages__wrapper {
+    padding-top: 52px;
+  }
+
+  .advantages__title {
+    max-width: 40%;
+  }
+
+  .advantages__text {
+    max-width: 70%;
   }
 }

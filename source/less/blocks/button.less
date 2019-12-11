@@ -1,3 +1,31 @@
 .button {
   display: block;
+  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  color: @alt-font-color;
+  font-size: @font-big;
+  line-height: @wide-line-height;
+  font-weight: 700;
+
+  background-color: @theme-color;
+
+  &:hover,
+  &:focus {
+    background-color: @hover-link-bg-color;
+  }
+
+  &:active {
+    color: @active-link-text-color;
+
+    background-color: @active-link-bg-color;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+
+    background-color: #e5e5e5;
+  }
 }

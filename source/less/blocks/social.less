@@ -1,5 +1,23 @@
 .social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 150px;
+
   padding: 0;
 
   list-style: none;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+
+  &:active path {
+    fill: @active-link-text-color;
+  }
 }

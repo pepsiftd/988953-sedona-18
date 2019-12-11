@@ -1,8 +1,8 @@
 .town-advantage-list {
   padding: 0;
 
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 26px;
+  padding-bottom: 18px;
 
   color: @main-font-color;
 
@@ -14,24 +14,26 @@
 
   padding: 0;
   margin: 0;
-  .container();
   padding-left: 70px;
-  padding-top: 18px;
+  padding-right: 20px;
+  padding-top: 9px;
   padding-bottom: 18px;
 
   text-align: left;
 
   &::before {
-    position: absolute;
     content: "";
 
+    position: absolute;
+
     background-size: contain;
+    background-repeat: no-repeat;
   }
 
   &--housing {
     &::before {
-      left: 25px;
-      top: 10px;
+      left: 22px;
+      top: 0;
 
       width: 39px;
       height: 37px;
@@ -42,8 +44,8 @@
 
   &--souvenirs {
     &::before {
-      left: 28px;
-      top: 10px;
+      left: 25px;
+      top: -2px;
 
       width: 32px;
       height: 38px;
@@ -54,8 +56,8 @@
 
   &--food {
     &::before {
-      left: 24px;
-      top: 10px;
+      left: 18px;
+      top: 4px;
 
       width: 40px;
       height: 35px;
@@ -84,6 +86,59 @@
 
 @media (min-width: @tablet-width) {
   .town-advantage-list__item {
-    width: 33%;
+    width: calc(100% / 3);
+
+    padding-top: 133px;
+    padding-left: 20px;
+    padding-bottom: 43px;
+
+    &::before {
+      top: 52px;
+      left: 50%;
+    }
+
+    &--housing {
+      &::before {
+        transform: scale(1.95) translateX(-10px);
+      }
+    }
+
+    &--souvenirs {
+      order: 1;
+
+      &::before {
+        transform: scale(2) translate(-9px, -1px);
+      }
+    }
+
+    &--food {
+      &::before {
+        transform: scale(1.98, 1.95) translate(-10px, 1px);
+      }
+
+      .town-advantage-list__text {
+        padding-left: 29px;
+        padding-right: 29px;
+      }
+    }
+  }
+
+  .town-advantage-list__title {
+    text-align: center;
+    font-size: @font-big;
+  }
+
+  .town-advantage-list__text {
+    margin-top: 21px;
+    padding-left: 27px;
+    padding-right: 27px;
+
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .town-advantage-list__item {
+    padding-bottom: 64px;
   }
 }

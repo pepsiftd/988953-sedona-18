@@ -7,32 +7,50 @@
   font-size: @font-small;
   line-height: 40px;
   font-weight: 700;
-
-  background-color: @theme-color;
 }
 
 .site-list__link {
   display: block;
   width: 100%;
-  height: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
   color: inherit;
+  font-size: @font-medium;
+
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+
+  background-color: @theme-color;
+
+  &:hover,
+  &:focus {
+    background-color: @hover-link-bg-color;
+  }
+
+  &:active {
+    color: @active-link-text-color;
+
+    background-color: @active-link-bg-color;
+  }
 }
 
 .site-list__item {
   text-align: center;
 
-  border-top: 1px solid #9ac2db;
-  border-bottom: 1px solid #678fa8;
-
-  &:last-child {
+  &:last-child .site-list__link {
     border-bottom: none;
-    box-shadow: inset 0 -7px 7px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -5px 5px -3px rgba(0, 0, 0, 0.2);
   }
 }
 
 @media (min-width: @tablet-width) {
   .site-list {
+    display: flex;
+
+    padding-left: 4.3%;
+    padding-right: 1.56%;
+
     color: @main-font-color;
 
     background-color: @main-bg-color;
@@ -41,8 +59,73 @@
   .site-list__item {
     border: none;
 
-    &:last-child {
+    &:nth-child(2) {
+      margin-right: auto;
+      margin-left: 6.5%;
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+      margin-right: 2.6%;
+    }
+
+    &:last-child .site-list__link {
       box-shadow: none;
+    }
+  }
+
+  .site-list__link {
+    padding: 8px 15px;
+
+    font-size: @font-small;
+
+    background-color: transparent;
+
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: @theme-color;
+
+      background-color: transparent;
+    }
+
+    &:active {
+      color: fade(@main-font-color, 30%);
+
+      background-color: transparent;
+    }
+
+    &--current {
+      color: #766357;
+
+      &:hover,
+      &:focus {
+        color: #604e43;
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    padding-left: 76px;
+    padding-right: 55px;
+  }
+
+  .site-list__item {
+    &:nth-child(2) {
+      margin-right: auto;
+      margin-left: 132px;
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+      margin-right: 107px;
     }
   }
 }

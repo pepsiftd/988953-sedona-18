@@ -1,5 +1,7 @@
 .main-nav {
   position: relative;
+
+  padding-bottom: 56px;
 }
 
 .main-nav__list {
@@ -8,20 +10,38 @@
 
 .main-nav__logo {
   position: absolute;
-  top: calc(100% - 22px);
+  top: calc(100% - 56px);
   left: 50%;
   transform: translateX(-50%);
+}
+
+.main-nav__toggle {
+  display: block;
+  width: 23px;
+  height: 22px;
+  position: absolute;
+  bottom: 17px;
+  right: 20px;
+
+  font-size: 0;
+
+  border: 0;
+
+  background-color: transparent;
+  background-image: url("../img/icon-menu.svg");
+
+  &--open {
+    top: 17px;
+
+    background-image: url("../img/icon-cross.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
     width: auto;
     margin: 0;
-  }
-
-  .main-nav__list {
-    display: flex;
-    justify-content: space-around;
+    padding-bottom: 0;
   }
 
   .main-nav__toggle {
