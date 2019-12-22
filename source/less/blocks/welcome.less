@@ -28,7 +28,19 @@
 
     background-position:
       bottom 0 left 50%,
-      center;
+      bottom 0 left -225px;
+
+    background-size:
+      contain,
+      768px 389px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: @tablet-width) {
+  .welcome--inner {
+    background-position:
+      bottom 0 left 50%,
+      bottom 0 right 0;
   }
 }
 
@@ -50,6 +62,13 @@
     &--inner {
       padding-top: 94px;
       padding-bottom: 110px;
+
+      background-position:
+        bottom 0 left 50%;
+
+      background-size:
+        contain,
+        cover;
 
       .welcome__image {
         height: 80px;
