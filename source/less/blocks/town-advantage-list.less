@@ -93,13 +93,16 @@
     padding-bottom: 43px;
 
     &::before {
-      top: 52px;
-      left: 50%;
+      transform: translateX(-50%);
     }
 
     &--housing {
       &::before {
-        transform: scale(1.95) translateX(-10px);
+        top: 34px;
+        left: 50%;
+
+        width: 74px;
+        height: 74px;
       }
     }
 
@@ -107,13 +110,21 @@
       order: 1;
 
       &::before {
-        transform: scale(2) translate(-9px, -1px);
+        top: 31px;
+        left: 50%;
+
+        width: 65px;
+        height: 75px;
       }
     }
 
     &--food {
       &::before {
-        transform: scale(1.98, 1.95) translate(-10px, 1px);
+        top: 37px;
+        left: 50%;
+
+        width: 75px;
+        height: 72px;
       }
 
       .town-advantage-list__text {
