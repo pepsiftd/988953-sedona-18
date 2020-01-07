@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона - Фото и Видео</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <div class="site-wrapper">
       <header class="page-header">
         <nav class="main-nav">
@@ -159,7 +162,7 @@
             <a class="social__link button" href="#">
               <span class="visually-hidden">Twitter</span>
               <svg width="17.5px" height="14.663px">
-                <use xlink:href="img/svg-sprite.svg#icon-twitter"></use>
+                <use xlink:href="#spr-icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -167,7 +170,7 @@
             <a class="social__link button" href="#">
               <span class="visually-hidden">Facebook</span>
               <svg width="8.672px" height="18.944px">
-                <use xlink:href="img/svg-sprite.svg#icon-facebook"></use>
+                <use xlink:href="#spr-icon-facebook"></use>
               </svg>
             </a>
           </li>
@@ -175,7 +178,7 @@
             <a class="social__link button" href="#">
               <span class="visually-hidden">Youtube</span>
               <svg width="19.979px" height="14.015px">
-                <use xlink:href="img/svg-sprite.svg#icon-youtube"></use>
+                <use xlink:href="#spr-icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -185,7 +188,7 @@
           <a href="https://htmlacademy.ru/intensive/adaptive" class="html-academy-logo">
             <span class="visually-hidden">HTML Academy</span>
             <svg width="26.943px" height="34.09px">
-              <use xlink:href="img/svg-sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="#spr-logo-htmlacademy"></use>
             </svg>
           </a>
         </p>
