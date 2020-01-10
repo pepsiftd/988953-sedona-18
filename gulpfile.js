@@ -22,7 +22,7 @@ gulp.task("clean", function() {
 
 gulp.task("copy", function() {
   return gulp.src([
-      "source/fonts/**/*.{woff, woff2}",
+      "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
       "source/js/**",
       "source/*.ico"
@@ -41,7 +41,7 @@ gulp.task("html", function() {
 })
 
 gulp.task("sprite", function() {
-  return gulp.src(["source/img/spr-*.svg"])
+  return gulp.src("source/img/spr-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -50,13 +50,13 @@ gulp.task("sprite", function() {
 });
 
 gulp.task("webp", function() {
-  return gulp.src("source/img/**/*.{png, jpg}")
+  return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("images", function() {
-  return gulp.src("source/img/**/*.{png, jpg, svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
