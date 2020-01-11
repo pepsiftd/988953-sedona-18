@@ -17,6 +17,7 @@
 
 .main-nav__toggle {
   display: block;
+  cursor: pointer;
   width: 23px;
   height: 22px;
   position: absolute;
@@ -30,10 +31,14 @@
   background-color: transparent;
   background-image: url("../img/icon-menu.svg");
 
-  &--open {
+  &--opened {
     top: 17px;
 
     background-image: url("../img/icon-cross.svg");
+  }
+
+  &--nojs {
+    display: none;
   }
 }
 
