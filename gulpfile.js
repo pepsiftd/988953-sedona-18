@@ -105,7 +105,6 @@ gulp.task("server", function () {
 
 gulp.task("refresh", function() {
   server.reload();
-  done();
 });
 
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "js"))
