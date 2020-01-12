@@ -38,8 +38,63 @@
           <img class="welcome__image" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону!">
         </div>
 
-        <h1 class="page-main__title visually-hidden">Форма отзыва</h1>
+        <h1 class="visually-hidden">Форма отзыва</h1>
 
+        <p class="page-main__title">Оставьте свой отзыв</p>
+        <p class="page-main__text">
+          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        </p>
+
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend>Представьтесь:</legend>
+            <label for="first-name">Имя*:</label>
+            <input type="text" name="first-name" id="first-name" placeholder="Петр" required>
+
+            <label for="last-name">Фамилия*:</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Иванов" required>
+
+            <label for="middle-name">Отчество:</label>
+            <input type="text" name="middle-name" id="middle-name" placeholder="Александрович">
+          </fieldset>
+
+          <fieldset>
+            <legend>Контактная информация:</legend>
+
+            <label for="phone">Контактный телефон*:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+
+            <label for="email">Электронная почта*:</label>
+            <input type="email" name="email" id="email" placeholder="Введите e-mail" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Ваше общее впечатление:</legend>
+            <input type="radio" name="opinion" id="opinion-positive" value="positive" checked>
+            <label for="opinion-positive">Скорее положительное</label>
+            <input type="radio" name="opinion" id="opinion-negative" value="negative">
+            <label for="opinion-negative">Скорее отрицательное</label>
+            <input type="radio" name="opinion" id="opinion-not-sure" value="not sure">
+            <label for="opinion-not-sure">Затрудняюсь ответить</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Посещенные достопримечательности:</legend>
+            <input type="checkbox" name="site-bridge" id="site-bridge" checked>
+            <label for="site-bridge">Мост Дьявола</label>
+            <input type="checkbox" name="site-bell" id="site-bell" checked>
+            <label for="site-bell">Гора-Колокол</label>
+            <input type="checkbox" name="site-park" id="site-park" checked>
+            <label for="site-park">Слайд-парк</label>
+            <input type="checkbox" name="site-rocks" id="site-rocks">
+            <label for="site-rocks">Красные скалы</label>
+          </fieldset>
+
+          <label for="experience">Опишите свои эмоции:</label>
+          <textarea name="experience" id="experience" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+
+          <input class="button" type="submit" value="Отправить отзыв">
+        </form>
       </main>
 
       <footer class="page-footer">
