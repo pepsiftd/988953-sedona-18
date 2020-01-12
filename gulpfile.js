@@ -103,8 +103,9 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("refresh", function() {
+gulp.task("refresh", function(done) {
   server.reload();
+  done();
 });
 
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "js"))
