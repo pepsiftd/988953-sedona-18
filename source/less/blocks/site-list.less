@@ -1,4 +1,5 @@
 .site-list {
+  display: none;
   padding: 0;
 
   list-style: none;
@@ -7,6 +8,14 @@
   font-size: @font-small;
   line-height: 40px;
   font-weight: 700;
+
+  &--nojs {
+    display: block;
+  }
+
+  &--opened {
+    display: block;
+  }
 }
 
 .site-list__link {
