@@ -62,10 +62,10 @@
             <legend>Контактная информация:</legend>
 
             <label for="phone">Контактный телефон*:</label>
-            <input type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+            <input type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="\+[0-9]{11}" title="+XXXXXXXXXXX" required>
 
             <label for="email">Электронная почта*:</label>
-            <input type="email" name="email" id="email" placeholder="Введите e-mail" required>
+            <input type="email" name="email" id="email" placeholder="Введите e-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})" title="example@email.com" required>
           </fieldset>
 
           <fieldset>
