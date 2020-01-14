@@ -91,7 +91,7 @@
                   <label for="opinion-negative">Скорее отрицательное</label>
                 </li>
                 <li>
-                  <input type="radio" name="opinion" id="opinion-not-sure" value="not sure">
+                  <input type="radio" name="opinion" id="opinion-not-sure" value="not-sure">
                   <label for="opinion-not-sure">Затрудняюсь ответить</label>
                 </li>
               </ul>
@@ -101,20 +101,20 @@
               <legend>Посещенные достопримечательности:</legend>
               <ul>
                 <li>
-                  <input type="checkbox" name="site-bridge" id="site-bridge" checked>
-                  <label for="site-bridge">Мост Дьявола</label>
+                  <input type="checkbox" name="visited-sites" value="devils-bridge" id="radio-site-bridge" checked>
+                  <label for="radio-site-bridge">Мост Дьявола</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="site-bell" id="site-bell" checked>
-                  <label for="site-bell">Гора-Колокол</label>
+                  <input type="checkbox" name="visited-sites" value="bell-rock" id="radio-site-bell" checked>
+                  <label for="radio-site-bell">Гора-Колокол</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="site-park" id="site-park" checked>
-                  <label for="site-park">Слайд-парк</label>
+                  <input type="checkbox" name="visited-sites" value="slide-rock-park" id="radio-site-park" checked>
+                  <label for="radio-site-park">Слайд-парк</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="site-rocks" id="site-rocks">
-                  <label for="site-rocks">Красные скалы</label>
+                  <input type="checkbox" name="visited-sites" value="red-rocks" id="radio-site-rocks">
+                  <label for="radio-site-rocks">Красные скалы</label>
                 </li>
               </ul>
             </fieldset>
@@ -127,6 +127,24 @@
             <input class="button" type="submit" value="Отправить отзыв">
             <span class="asterisk">* - обязательные поля</span>
           </form>
+        </section>
+
+        <section class="modal modal--error">
+          <h2 class="visually-hidden">Ошибка отправки формы</h2>
+          <p class="modal__title">Что-то пошло не так!</p>
+          <p class="modal__text">
+            Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+          </p>
+          <button class="modal__close button" type="button">OK</button>
+        </section>
+
+        <section class="modal modal--success">
+          <h2 class="visually-hidden">Форма успешно отправлена</h2>
+          <p class="modal__title">Ваш отзыв отправлен!</p>
+          <p class="modal__text">
+            Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+          </p>
+          <button class="modal__close button" type="button">Закрыть окно</button>
         </section>
       </main>
 
