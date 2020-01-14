@@ -46,86 +46,86 @@
             Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
 
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <fieldset>
-              <legend>Представьтесь:</legend>
-              <p>
-                <label for="first-name">Имя*:</label>
-                <input type="text" name="first-name" id="first-name" placeholder="Петр" required>
+          <form class="page-main__form feedback" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="feedback__group">
+              <legend class="feedback__title">Представьтесь:</legend>
+              <p class="feedback__info-block">
+                <label class="feedback__label" for="first-name">Имя*:</label>
+                <input class="feedback__input" type="text" name="first-name" id="first-name" placeholder="Петр" required>
               </p>
 
-              <p>
-                <label for="surname">Фамилия*:</label>
-                <input type="text" name="surname" id="surname" placeholder="Иванов" required>
+              <p class="feedback__info-block">
+                <label class="feedback__label" for="surname">Фамилия*:</label>
+                <input class="feedback__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
               </p>
 
-              <p>
-                <label for="patronymic">Отчество:</label>
-                <input type="text" name="patronymic" id="patronymic" placeholder="Александрович">
-              </p>
-            </fieldset>
-
-            <fieldset>
-              <legend>Контактная информация:</legend>
-
-              <p>
-                <label for="phone">Контактный телефон*:</label>
-                <input type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="\+[0-9]{11}" title="+XXXXXXXXXXX" required>
-              </p>
-
-              <p>
-                <label for="email">Электронная почта*:</label>
-                <input type="email" name="email" id="email" placeholder="Введите e-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})" title="example@email.com" required>
+              <p class="feedback__info-block">
+                <label class="feedback__label" for="patronymic">Отчество:</label>
+                <input class="feedback__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
               </p>
             </fieldset>
 
-            <fieldset>
-              <legend>Ваше общее впечатление:</legend>
-              <ul>
-                <li>
+            <fieldset class="feedback__group">
+              <legend class="feedback__title">Контактная информация:</legend>
+
+              <p class="feedback__info-block">
+                <label class="feedback__label" for="phone">Контактный телефон*:</label>
+                <input class="feedback__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="\+[0-9]{11}" title="+XXXXXXXXXXX" required>
+              </p>
+
+              <p class="feedback__info-block">
+                <label class="feedback__label" for="email">Электронная почта*:</label>
+                <input class="feedback__input" type="email" name="email" id="email" placeholder="Введите e-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})" title="example@email.com" required>
+              </p>
+            </fieldset>
+
+            <fieldset class="feedback__group">
+              <legend class="feedback__title">Ваше общее впечатление:</legend>
+              <ul class="feedback__list">
+                <li class="feedback__list-item">
                   <input type="radio" name="opinion" id="opinion-positive" value="positive" checked>
                   <label for="opinion-positive">Скорее положительное</label>
                 </li>
-                <li>
+                <li class="feedback__list-item">
                   <input type="radio" name="opinion" id="opinion-negative" value="negative">
                   <label for="opinion-negative">Скорее отрицательное</label>
                 </li>
-                <li>
+                <li class="feedback__list-item">
                   <input type="radio" name="opinion" id="opinion-not-sure" value="not-sure">
                   <label for="opinion-not-sure">Затрудняюсь ответить</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
-              <legend>Посещенные достопримечательности:</legend>
-              <ul>
-                <li>
+            <fieldset class="feedback__group">
+              <legend class="feedback__title">Посещенные достопримечательности:</legend>
+              <ul class="feedback__list">
+                <li class="feedback__list-item">
                   <input type="checkbox" name="visited-sites" value="devils-bridge" id="radio-site-bridge" checked>
                   <label for="radio-site-bridge">Мост Дьявола</label>
                 </li>
-                <li>
+                <li class="feedback__list-item">
                   <input type="checkbox" name="visited-sites" value="bell-rock" id="radio-site-bell" checked>
                   <label for="radio-site-bell">Гора-Колокол</label>
                 </li>
-                <li>
+                <li class="feedback__list-item">
                   <input type="checkbox" name="visited-sites" value="slide-rock-park" id="radio-site-park" checked>
                   <label for="radio-site-park">Слайд-парк</label>
                 </li>
-                <li>
+                <li class="feedback__list-item">
                   <input type="checkbox" name="visited-sites" value="red-rocks" id="radio-site-rocks">
                   <label for="radio-site-rocks">Красные скалы</label>
                 </li>
               </ul>
             </fieldset>
 
-            <p>
-              <label for="experience">Опишите свои эмоции:</label>
-              <textarea name="experience" id="experience" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+            <p class="feedback__info-block">
+              <label class="feedback__title" for="experience">Опишите свои эмоции:</label>
+              <textarea class="feedback__input" name="experience" id="experience" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
             </p>
 
             <input class="button" type="submit" value="Отправить отзыв">
-            <span class="asterisk">* - обязательные поля</span>
+            <span class="feedback__asterisk">* - обязательные поля</span>
           </form>
         </section>
 
