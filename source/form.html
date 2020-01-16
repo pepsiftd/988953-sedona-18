@@ -47,7 +47,7 @@
           </p>
 
           <form class="page-main__form feedback" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="feedback__group">
+            <fieldset class="feedback__group feedback__group--bordered">
               <legend class="feedback__title">Представьтесь:</legend>
               <p class="feedback__info-block feedback__info-block--row">
                 <label class="feedback__label" for="first-name">Имя*:</label>
@@ -66,7 +66,7 @@
             </fieldset>
 
             <fieldset class="feedback__group">
-              <legend class="feedback__title">Контактная информация:</legend>
+              <legend class="feedback__title  feedback__title--decorated">Контактная информация:</legend>
 
               <p class="feedback__info-block">
                 <label class="feedback__label" for="phone">Контактный телефон*:</label>
@@ -98,7 +98,7 @@
             </fieldset>
 
             <fieldset class="feedback__group">
-              <legend class="feedback__title">Посещенные достопримечательности:</legend>
+              <legend class="feedback__title feedback__title--decorated">Посещенные достопримечательности:</legend>
               <ul class="feedback__list">
                 <li class="feedback__list-item">
                   <input type="checkbox" name="visited-sites" value="devils-bridge" id="radio-site-bridge" checked>
@@ -120,11 +120,11 @@
             </fieldset>
 
             <p class="feedback__info-block">
-              <label class="feedback__title" for="experience">Опишите свои эмоции:</label>
-              <textarea class="feedback__input" name="experience" id="experience" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+              <label class="feedback__title  feedback__title--decorated" for="experience">Опишите свои эмоции:</label>
+              <textarea class="feedback__textarea" name="experience" id="experience" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
             </p>
 
-            <input class="button" type="submit" value="Отправить отзыв">
+            <input class="feedback__submit button" type="submit" value="Отправить отзыв">
             <span class="feedback__asterisk">* - обязательные поля</span>
           </form>
         </section>
