@@ -1,5 +1,7 @@
 .feedback__group {
   padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 
   border: 0;
   border-top: 1px solid #e5e5e5;
@@ -11,4 +13,25 @@
   margin: 0;
 
   text-align: center;
+}
+
+.feedback__info-block {
+  display: flex;
+  flex-direction: column;
+
+  &--row {
+    flex-direction: row;
+  }
+}
+
+.feedback__label {
+  margin-right: 5px;
+}
+
+.feedback__input {
+  flex-grow: 1;
+}
+
+.feedback__list {
+  list-style: none;
 }
