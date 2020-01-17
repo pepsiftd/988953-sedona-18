@@ -51,17 +51,17 @@
               <legend class="feedback__title feedback__title--lowered">Представьтесь:</legend>
               <p class="feedback__info-block feedback__info-block--row">
                 <label class="feedback__label" for="first-name">Имя*:</label>
-                <input class="feedback__input" type="text" name="first-name" id="first-name" placeholder="Петр" required>
+                <input class="feedback__input" size="10" type="text" name="first-name" id="first-name" placeholder="Петр" required>
               </p>
 
               <p class="feedback__info-block feedback__info-block--row">
                 <label class="feedback__label" for="surname">Фамилия*:</label>
-                <input class="feedback__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+                <input class="feedback__input" size="10" type="text" name="surname" id="surname" placeholder="Иванов" required>
               </p>
 
               <p class="feedback__info-block feedback__info-block--row">
                 <label class="feedback__label" for="patronymic">Отчество:</label>
-                <input class="feedback__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+                <input class="feedback__input" size="10" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
               </p>
             </fieldset>
 
@@ -69,12 +69,12 @@
               <legend class="feedback__title  feedback__title--decorated">Контактная информация:</legend>
 
               <p class="feedback__info-block feedback__info-block--inline">
-                <label class="feedback__label feedback__label--phone" for="phone" data-short-text="Телефон*:">Контактный телефон*:</label>
+                <label class="feedback__label feedback__label--phone feedback__label--indent" for="phone" data-short-text="Телефон*:">Контактный телефон*:</label>
                 <input class="feedback__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="\+[0-9]{11}" title="+XXXXXXXXXXX" required>
               </p>
 
               <p class="feedback__info-block feedback__info-block--inline">
-                <label class="feedback__label" for="email">Электронная почта*:</label>
+                <label class="feedback__label feedback__label--email feedback__label--indent" for="email">Электронная почта*:</label>
                 <input class="feedback__input" type="email" name="email" id="email" placeholder="Введите e-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})" title="example@email.com" required>
               </p>
             </fieldset>
