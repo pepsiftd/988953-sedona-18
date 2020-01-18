@@ -30,6 +30,10 @@
   font-size: @font-medium;
   font-weight: 700;
   text-align: center;
+
+  &--shrunk {
+    line-height: @medium-line-height;
+  }
 }
 
 .feedback__info-block {
@@ -57,6 +61,8 @@
 }
 
 .feedback__label {
+  position: relative;
+
   margin-right: 13px;
 
   font-size: @font-small;
@@ -138,6 +144,14 @@
   line-height: @wide-line-height;
   font-weight: 700;
   text-transform: none;
+
+  &--high {
+    margin-top: 24px;
+
+    &:first-child {
+      margin-top: -7px;
+    }
+  }
 }
 
 .feedback__radio + label {
@@ -175,6 +189,49 @@
 
 .feedback__radio:checked + label::before {
   border-width: 17px;
+}
+
+.feedback__icon-tick {
+  position: absolute;
+  top: 6px;
+  left: 17px;
+
+  display: none;
+}
+
+.feedback__checkbox-label {
+  position: relative;
+}
+
+.feedback__checkbox + label::before {
+  content: "";
+
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+
+  margin-right: 18px;
+
+  vertical-align: middle;
+
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+
+.feedback__checkbox + label:hover::before {
+  background-color: #e5e5e5;
+}
+
+.feedback__checkbox + label:active::before {
+  background-color: #d5d5d5;
+}
+
+.feedback__checkbox:checked + .feedback__checkbox-label .feedback__icon-tick {
+  display: block;
+}
+
+.feedback__checkbox-label:active .feedback__icon-tick {
+  opacity: 0.3;
 }
 
 .feedback__textarea {
