@@ -1,4 +1,6 @@
 .feedback {
+  padding-bottom: 37px;
+
   border-top: 1px solid #e5e5e5;
 }
 
@@ -30,6 +32,10 @@
   font-size: @font-medium;
   font-weight: 700;
   text-align: center;
+
+  &--higher {
+    top: 0;
+  }
 
   &--shrunk {
     line-height: @medium-line-height;
@@ -69,6 +75,8 @@
   line-height: @wide-line-height;
 
   &--indent {
+    position: static;
+
     margin-left: 21px;
     margin-bottom: 6px;
 
@@ -235,13 +243,34 @@
 }
 
 .feedback__textarea {
-  margin-left: 20px;
-  margin-right: 20px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  padding: 17px 20px;
+  width: 87.5%;
+  height: 160px;
+
+  font-size: @font-medium;
+  line-height: @wide-line-height;
+  font-weight: 700;
+
+  background-color: @input-bg-color;
+  border: none;
+
+  resize: none;
+
+  &::placeholder {
+    color: @main-font-color;
+  }
 }
 
 .feedback__submit {
   margin: 0 auto;
+  margin-top: 52px;
   width: 87.5%;
+
+  text-transform: uppercase;
 }
 
 .feedback__asterisk {
