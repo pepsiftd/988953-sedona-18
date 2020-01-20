@@ -68,3 +68,56 @@
 .modal__separate-line {
   display: block;
 }
+
+@media (min-width: @tablet-width) {
+  .modal {
+    padding-top: 63px;
+    height: 347px;
+
+    &--success {
+      width: 644px;
+    }
+
+    &--error {
+      width: 400px;
+    }
+  }
+
+  .modal__title {
+    margin: 0 auto;
+    max-width: 54%;
+
+    font-size: 30px;
+  }
+
+  .modal__text {
+    max-width: 65%;
+    margin-top: 30px;
+
+    &--error {
+      max-width: 70%;
+      margin-top: 39px;
+      margin-bottom: 39px;
+    }
+  }
+
+  .modal__separate-line {
+    display: inline;
+  }
+
+  .modal__button-wrapper {
+    margin-top: 34px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .modal__close {
+    margin: 0 auto;
+
+    font-size: @font-big;
+
+    &--wrapped {
+      width: 458px;
+    }
+  }
+}
