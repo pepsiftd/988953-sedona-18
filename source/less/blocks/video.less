@@ -128,3 +128,40 @@
     fill: #ffffff;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .video__title {
+    margin-top: 71px;
+  }
+
+  .video__text {
+    max-width: 37%;
+  }
+
+  .video__image {
+    margin-top: 71px;
+    width: 800px;
+
+    border-bottom: none;
+  }
+
+  .video__controls {
+    width: 800px;
+  }
+
+  .video__volume-control {
+    width: 540px;
+  }
+
+  .video__button {
+    top: 36px;
+
+    &--subtitles {
+      right: 94px;
+    }
+
+    &--fullscreen {
+      right: 43px;
+    }
+  }
+}
