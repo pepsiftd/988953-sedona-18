@@ -171,9 +171,29 @@
           </picture>
 
           <div class="video__controls">
-            <button class="video__replay-button" type="button">Повтор</button>
-            <button class="video__subtitles-button" type="button">Субтитры</button>
-            <button class="video__fullscreen-button" type="button">Во весь экран</button>
+            <div class="video__volume-control volume">
+              <div class="volume__bar">
+                <div class="volume__slider"></div>
+              </div>
+            </div>
+            <button class="video__button video__button--replay" type="button">
+              <span class="visually-hidden">Повтор</span>
+              <svg class="video__button-icon" width="16" height="20">
+                <use xlink:href="#spr-icon-video-replay"></use>
+              </svg>
+            </button>
+            <button class="video__button video__button--subtitles" type="button">
+              <span class="visually-hidden">Субтитры</span>
+              <svg class="video__button-icon" width="32" height="20">
+                <use xlink:href="#spr-icon-video-subtitles"></use>
+              </svg>
+            </button>
+            <button class="video__button video__button--fullscreen" type="button">
+              <span class="visually-hidden">Во весь экран</span>
+              <svg class="video__button-icon" width="20" height="20">
+                <use xlink:href="#spr-icon-video-fullscreen"></use>
+              </svg>
+            </button>
           </div>
         </section>
       </main>
