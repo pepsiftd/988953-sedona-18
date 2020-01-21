@@ -335,18 +335,20 @@
 
     &--decorated {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+
+      text-align: center;
 
       &::before,
       &::after {
         content: "";
 
         display: block;
-        flex-grow: 1;
         height: 1px;
-        min-width: 19%;
+        width: 124px;
         margin-bottom: 3px;
 
         background-color: #e5e5e5;
@@ -450,6 +452,14 @@
       &::before,
       &::after {
         width: 280px;
+      }
+
+      &::before {
+        margin: 0;
+      }
+
+      &::after {
+        margin: 0;
       }
     }
   }
