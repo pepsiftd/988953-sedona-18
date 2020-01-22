@@ -19,19 +19,22 @@ mainNavToggle.classList.remove("main-nav__toggle--nojs");
 /* Обработка отправки формы и закрытия модальных окон */
 
 form.addEventListener("submit", function(evt) {
+  evt.preventDefault();
+  var hasEmptyField = false;
+
   modalRequired.forEach(function(item, i, arr) {
-    evt.preventDefault();
-
     if (!item.value) {
-      modalError.classList.add("modal--open");
-      modalOpen = modalError;
-    }
-
-    else {
-      modalSuccess.classList.add("modal--open");
-      modalOpen = modalSuccess;
+      hasEmptyField = true;
     }
   });
+
+  if (hasEmptyField) {
+    modalError.classList.add("modal--open");
+    modalOpen = modalError;
+  } else {
+    modalSuccess.classList.add("modal--open");
+    modalOpen = modalSuccess;
+  }
 });
 
 modalClose.forEach(function(item, i, arr) {
