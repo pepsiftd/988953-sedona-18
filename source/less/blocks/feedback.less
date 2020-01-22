@@ -334,11 +334,9 @@
     }
 
     &--decorated {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
+      display: block;
+      margin: 0 auto;
+      width: 400px;
 
       text-align: center;
 
@@ -346,20 +344,22 @@
       &::after {
         content: "";
 
+        position: absolute;
+        top: 43%;
+
         display: block;
         height: 1px;
         width: 124px;
-        margin-bottom: 3px;
 
         background-color: #e5e5e5;
       }
 
       &::before {
-        margin-right: 60px;
+        left: 400px;
       }
 
       &::after {
-        margin-left: 60px;
+        right: 400px;
       }
     }
   }
@@ -452,14 +452,6 @@
       &::before,
       &::after {
         width: 280px;
-      }
-
-      &::before {
-        margin: 0;
-      }
-
-      &::after {
-        margin: 0;
       }
     }
   }
