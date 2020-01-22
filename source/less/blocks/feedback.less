@@ -74,6 +74,10 @@
   font-size: @font-small;
   line-height: @wide-line-height;
 
+  &--patronymic {
+    margin-right: 16px;
+  }
+
   &--indent {
     position: static;
 
@@ -210,37 +214,37 @@
 
 .feedback__checkbox-label {
   position: relative;
-}
 
-.feedback__checkbox + label::before {
-  content: "";
+  &::before {
+    content: "";
 
-  display: inline-block;
-  width: 56px;
-  height: 56px;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
 
-  margin-right: 18px;
+    margin-right: 18px;
 
-  vertical-align: middle;
+    vertical-align: middle;
 
-  background-color: #f2f2f2;
-  border-radius: 8px;
-}
+    background-color: #f2f2f2;
+    border-radius: 6px;
+  }
 
-.feedback__checkbox + label:hover::before {
-  background-color: #e5e5e5;
-}
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
 
-.feedback__checkbox + label:active::before {
-  background-color: #d5d5d5;
+  &:active::before {
+    background-color: #d5d5d5;
+  }
+
+  &:active .feedback__icon-tick {
+    opacity: 0.3;
+  }
 }
 
 .feedback__checkbox:checked + .feedback__checkbox-label .feedback__icon-tick {
   display: block;
-}
-
-.feedback__checkbox-label:active .feedback__icon-tick {
-  opacity: 0.3;
 }
 
 .feedback__textarea {
@@ -305,7 +309,7 @@
     }
 
     &:nth-of-type(2) {
-      margin-top: 48px;
+      margin-top: 50px;
       padding-top: 20px;
     }
 
@@ -331,7 +335,7 @@
       top: 10px;
       left: -25px;
 
-      margin-bottom: 45px;
+      margin-bottom: 46px;
     }
 
     &--decorated {
@@ -346,7 +350,7 @@
         content: "";
 
         position: absolute;
-        top: 43%;
+        top: 45%;
 
         display: block;
         height: 1px;
@@ -371,7 +375,7 @@
 
     &--lower {
       margin: 0 auto;
-      margin-top: 25px;
+      margin-top: 27px;
       padding-left: 60px;
       width: 580px;
     }
@@ -386,10 +390,10 @@
 
     &--high {
       width: 50%;
-      margin-top: 32px;
+      margin-top: 33px;
 
       &:first-child {
-        margin-top: 32px;
+        margin-top: 33px;
       }
     }
   }
@@ -397,8 +401,12 @@
   .feedback__info-block {
     width: 100%;
 
-    &:nth-of-type(2) {
+    &--inline {
       margin-top: 24px;
+
+      &:nth-of-type(2) {
+        margin-top: 24px;
+      }
     }
 
     &--lowered {
@@ -406,9 +414,21 @@
     }
   }
 
+  .feedback__label {
+    &--indent {
+      margin-bottom: 7px;
+    }
+  }
+
+  .feedback__input {
+    &--contacts {
+      min-height: 58px;
+    }
+  }
+
   .feedback__textarea {
     margin: 0;
-    margin-top: 52px;
+    margin-top: 56px;
     width: 100%;
   }
 
@@ -434,19 +454,16 @@
     padding-bottom: 65px;
   }
 
-  .feedback__list {
-    &--column {
-      flex-direction: column;
-      padding-left: 5px;
-      margin-top: 25px;
-    }
-  }
-
   .feedback__title {
-    &--left {
-      margin-left: 25px;
+    &--lowered {
+      margin-left: 105px;
+      margin-bottom: 47px;
 
       text-align: left;
+    }
+
+    &--left {
+      margin-left: 25px;
     }
 
     &--decorated {
@@ -455,9 +472,20 @@
         width: 280px;
       }
     }
+
+    &--shrunk {
+      &::before,
+      &::after {
+        top: 48%;
+      }
+    }
   }
 
   .feedback__group {
+    &:nth-of-type(2) {
+      margin-top: 48px;
+    }
+
     &--bordered {
       padding-left: 80px;
     }
@@ -467,16 +495,20 @@
     &--inline {
       display: inline-block;
       width: 50%;
-      margin-top: 68px;
+      margin-top: 74px;
 
       &:nth-of-type(1) {
         width: 400px;
         margin-right: 79px;
       }
+
+      &:nth-of-type(2) {
+        margin-top: 74px;
+      }
     }
 
     &--lowered {
-      margin-top: 68px;
+      margin-top: 67px;
     }
   }
 
@@ -485,14 +517,25 @@
 
     &--lower {
       justify-content: space-between;
-      width: 99.5%;
+      width: 100%;
       padding-left: 0;
+      padding-right: 4px;
+    }
+
+    &--column {
+      flex-direction: column;
+      padding-left: 5px;
+      margin-top: 22px;
     }
   }
 
   .feedback__list-item {
     &--high {
       width: auto;
+      margin-top: 35px;
+      &:first-child {
+        margin-top: 35px;
+      }
     }
   }
 
@@ -515,6 +558,12 @@
 
         font-size: @font-small;
       }
+    }
+  }
+
+  .feedback__checkbox-label {
+    &::before {
+      margin-right: 20px;
     }
   }
 }
