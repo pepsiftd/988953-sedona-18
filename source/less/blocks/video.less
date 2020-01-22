@@ -55,6 +55,7 @@
 
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &--replay {
     left: 26px;
@@ -71,6 +72,15 @@
 
 .video__button-icon {
   fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -126,6 +136,16 @@
 
   .video__button-icon {
     fill: #ffffff;
+
+    &:hover,
+    &:focus {
+      fill: #ffffff;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
