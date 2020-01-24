@@ -74,15 +74,17 @@
             <fieldset class="feedback__group">
               <legend class="feedback__title  feedback__title--decorated">Контактная информация:</legend>
 
-              <p class="feedback__info-block feedback__info-block--inline">
-                <label class="feedback__label feedback__label--phone feedback__label--indent" for="phone" data-short-text="Телефон*:">Контактный телефон*:</label>
-                <input class="feedback__input feedback__input--contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="\+[0-9]{11}" title="+XXXXXXXXXXX" required>
-              </p>
+              <div class="feedback__flex-container">
+                <p class="feedback__info-block feedback__info-block--inline">
+                  <label class="feedback__label feedback__label--phone feedback__label--indent" for="phone" data-short-text="Телефон*:">Контактный телефон*:</label>
+                  <input class="feedback__input feedback__input--contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="\+[0-9]{11}" title="+XXXXXXXXXXX" required>
+                </p>
 
-              <p class="feedback__info-block feedback__info-block--inline">
-                <label class="feedback__label feedback__label--email feedback__label--indent" for="email">Электронная почта*:</label>
-                <input class="feedback__input feedback__input--contacts" type="email" name="email" id="email" placeholder="Введите e-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})" title="example@email.com" required>
-              </p>
+                <p class="feedback__info-block feedback__info-block--inline">
+                  <label class="feedback__label feedback__label--email feedback__label--indent" for="email">Электронная почта*:</label>
+                  <input class="feedback__input feedback__input--contacts" type="email" name="email" id="email" placeholder="Введите e-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})" title="example@email.com" required>
+                </p>
+              </div>
             </fieldset>
 
             <fieldset class="feedback__group">

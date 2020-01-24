@@ -501,17 +501,20 @@
     }
   }
 
+  .feedback__flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .feedback__info-block {
     &--inline {
-      display: inline-block;
+      flex-direction: row;
+      align-items: center;
       width: 50%;
       margin-top: 74px;
 
-      vertical-align: middle;
-
       &:nth-of-type(1) {
         width: 400px;
-        margin-right: 79px;
       }
 
       &:nth-of-type(2) {
@@ -562,6 +565,8 @@
   .feedback__label {
     &--indent {
       margin-left: 0;
+      margin-bottom: 0;
+      height: 26px;
     }
 
     &--phone {
