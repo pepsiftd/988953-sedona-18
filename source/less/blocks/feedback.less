@@ -169,21 +169,17 @@
 .feedback__radio + label {
   position: relative;
 
-  display: inline-block;
-
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
 }
 
 .feedback__radio + label::before {
   content: "";
 
-  display: inline-block;
+  display: block;
   width: 56px;
   height: 56px;
-
   margin-right: 22px;
-
-  vertical-align: middle;
 
   background-color: #000000;
   border: 28px solid #f2f2f2;
@@ -212,7 +208,7 @@
 
 .feedback__icon-tick {
   position: absolute;
-  top: 6px;
+  top: 19px;
   left: 17px;
 
   display: none;
@@ -221,14 +217,17 @@
 .feedback__checkbox-label {
   position: relative;
 
+  display: flex;
+  align-items: center;
+
   &::before {
     content: "";
 
-    display: inline-block;
+    display: block;
     width: 56px;
     height: 56px;
 
-    margin-right: 18px;
+    margin-right: 16px;
 
     vertical-align: middle;
 
