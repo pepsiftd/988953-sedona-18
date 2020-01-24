@@ -31,6 +31,8 @@
 .video__controls {
   position: relative;
 
+  display: flex;
+  align-items: center;
   margin: 0 auto;
   width: 87.5%;
   height: 66px;
@@ -47,26 +49,25 @@
 }
 
 .video__button {
-  position: absolute;
-  top: 23px;
-
   padding: 0;
   margin: 0;
+  padding-top: 2px;
 
   background-color: transparent;
   border: none;
   cursor: pointer;
 
   &--replay {
-    left: 26px;
+    margin-left: 26px;
+    margin-right: auto;
   }
 
   &--subtitles {
-    right: 74px;
+    margin-right: 31px;
   }
 
   &--fullscreen {
-    right: 23px;
+    margin-right: 23px;
   }
 }
 
@@ -112,25 +113,26 @@
   }
 
   .video__volume-control {
-    left: 93px;
-    top: 23px;
+    position: static;
 
+    margin-left: auto;
+    margin-right: auto;
     width: 60.03%;
   }
 
   .video__button {
-    top: 35px;
-
     &--replay {
-      left: 35px;
+      order: -1;
+      margin-left: 35px;
+      margin-right: 0;
     }
 
     &--subtitles {
-      right: 92px;
+      margin-right: 31px;
     }
 
     &--fullscreen {
-      right: 41px;
+      margin-right: 41px;
     }
   }
 
@@ -174,14 +176,8 @@
   }
 
   .video__button {
-    top: 36px;
-
-    &--subtitles {
-      right: 94px;
-    }
-
     &--fullscreen {
-      right: 43px;
+      margin-right: 43px;
     }
   }
 }
