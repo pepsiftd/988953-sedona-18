@@ -22,11 +22,11 @@ form.addEventListener("submit", function(evt) {
   evt.preventDefault();
   var hasEmptyField = false;
 
-  modalRequired.forEach(function(item, i, arr) {
-    if (!item.value) {
+  for (var i = 0; i < modalRequired.length; i++) {
+    if (!modalRequired[i].value) {
       hasEmptyField = true;
     }
-  });
+  }
 
   if (hasEmptyField) {
     modalError.classList.add("modal--open");
@@ -37,8 +37,8 @@ form.addEventListener("submit", function(evt) {
   }
 });
 
-modalClose.forEach(function(item, i, arr) {
-  item.addEventListener("click", function(evt) {
+for (var i = 0; i < modalClose.length; i++) {
+  modalClose[i].addEventListener("click", function(evt) {
     modalOpen.classList.remove("modal--open");
   });
-});
+}
