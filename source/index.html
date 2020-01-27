@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div style="display: none">
@@ -158,12 +164,13 @@
             <span class="separate-line">Укажите предполагаемые даты поездки,</span> и мы покажем Вам лучшие предложения гостиниц в Седоне
           </p>
 
-          <a href="#" class="hotel-search__button button">Найти гостиницу</a>
+          <a class="hotel-search__button button" href="#">Найти гостиницу</a>
         </section>
 
         <section class="map">
           <h2 class="visually-hidden">Как нас найти</h2>
-          <a href="#" class="map__link">
+          <div class="map__api" id="api-map"></div>
+          <a class="map__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
@@ -210,7 +217,7 @@
         </ul>
 
         <p class="page-footer__copyright copyright">Разработано
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="html-academy-logo">
+          <a class="html-academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">HTML Academy</span>
             <svg width="26.943px" height="34.09px">
               <use xlink:href="#spr-logo-htmlacademy"></use>
@@ -219,6 +226,9 @@
         </p>
       </footer>
     </div>
-    <script src="js/script-min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d8d7a0c1-213b-4de2-be91-790a82059b89&lang=ru_RU">
+    </script>
+    <script src="js/ymap.min.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

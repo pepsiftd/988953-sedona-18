@@ -1,0 +1,51 @@
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.volume__bar {
+  position: relative;
+
+  width: 83.9%;
+  height: 3px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.volume__slider {
+  position: absolute;
+  top: -3px;
+  left: 17%;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transform: translateX(-5px);
+}
+
+@media (min-width: @tablet-width) {
+  .volume {
+    background-color: transparent;
+  }
+
+  .volume__bar {
+    width: 100%;
+  }
+
+  .volume__slider {
+    left: 30%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .volume__slider {
+    left: 21.5%;
+  }
+}

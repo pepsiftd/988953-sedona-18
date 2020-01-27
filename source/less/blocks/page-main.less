@@ -15,16 +15,52 @@
   text-align: center;
 }
 
+.page-main__text {
+  max-width: 87.5%;
+  margin: 0 auto;
+  margin-top: 26px;
+
+  line-height: @medium-line-height;
+  text-align: center;
+}
+
+.page-main__form {
+  margin: 0;
+  margin-top: 17px;
+}
+
+.page-main__video {
+  padding-bottom: 40px;
+}
+
 @media (min-width: @tablet-width) {
   .page-main__title {
     margin-top: 75px;
 
     font-size: 30px;
   }
+
+  .page-main__text {
+    margin-top: 30px;
+    max-width: 57%;
+  }
+
+  .page-main__video {
+    margin-bottom: -93px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__title {
     margin-top: 112px;
+  }
+
+  .page-main__text {
+    max-width: 37%;
+  }
+
+  .page-main__video {
+    padding-bottom: 0;
+    margin-bottom: -7px;
   }
 }

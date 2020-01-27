@@ -2,12 +2,12 @@
   display: none;
   padding: 0;
 
-  list-style: none;
-
   color: @alt-font-color;
   font-size: @font-small;
   line-height: 40px;
   font-weight: 700;
+
+  list-style: none;
 
   &--nojs {
     display: block;
@@ -29,7 +29,6 @@
 
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
-
   background-color: @theme-color;
 
   &:hover,
@@ -56,7 +55,8 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-left: 4.3%;
     padding-right: 1.56%;
 
@@ -69,12 +69,12 @@
     border: none;
 
     &:nth-child(2) {
-      margin-right: auto;
+      margin-right: 12.3%;
       margin-left: 6.5%;
     }
 
     &:nth-child(3) {
-      margin-left: auto;
+      margin-left: 12.3%;
       margin-right: 2.6%;
     }
 
@@ -89,7 +89,6 @@
     font-size: @font-small;
 
     background-color: transparent;
-
     border: none;
 
     &:hover,
@@ -128,12 +127,12 @@
 
   .site-list__item {
     &:nth-child(2) {
-      margin-right: auto;
+      margin-right: 16.5%;
       margin-left: 132px;
     }
 
     &:nth-child(3) {
-      margin-left: auto;
+      margin-left: 16.5%;
       margin-right: 107px;
     }
   }
