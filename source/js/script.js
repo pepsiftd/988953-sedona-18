@@ -18,27 +18,29 @@ mainNavToggle.classList.remove("main-nav__toggle--nojs");
 
 /* Обработка отправки формы и закрытия модальных окон */
 
-form.addEventListener("submit", function(evt) {
-  evt.preventDefault();
-  var hasEmptyField = false;
+if (form) {
+  form.addEventListener("submit", function(evt) {
+    evt.preventDefault();
+    var hasEmptyField = false;
 
-  for (var i = 0; i < modalRequired.length; i++) {
-    if (!modalRequired[i].value) {
-      hasEmptyField = true;
+    for (var i = 0; i < modalRequired.length; i++) {
+      if (!modalRequired[i].value) {
+        hasEmptyField = true;
+      }
     }
-  }
 
-  if (hasEmptyField) {
-    modalError.classList.add("modal--open");
-    modalOpen = modalError;
-  } else {
-    modalSuccess.classList.add("modal--open");
-    modalOpen = modalSuccess;
-  }
-});
-
-for (var i = 0; i < modalClose.length; i++) {
-  modalClose[i].addEventListener("click", function(evt) {
-    modalOpen.classList.remove("modal--open");
+    if (hasEmptyField) {
+      modalError.classList.add("modal--open");
+      modalOpen = modalError;
+    } else {
+      modalSuccess.classList.add("modal--open");
+      modalOpen = modalSuccess;
+    }
   });
+
+  for (var i = 0; i < modalClose.length; i++) {
+    modalClose[i].addEventListener("click", function(evt) {
+      modalOpen.classList.remove("modal--open");
+    });
+  }
 }
